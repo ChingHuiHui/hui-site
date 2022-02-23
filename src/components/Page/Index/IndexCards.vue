@@ -1,6 +1,11 @@
 <template>
   <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
-    <div class="intro-card" v-for="{ title } in intros" :key="title">
+    <router-link
+      :to="to"
+      class="intro-card"
+      v-for="{ title, to } in intros"
+      :key="title"
+    >
       <video src="@/assets/video.mp4" autoplay loop muted></video>
       <div class="backdrop" />
       <div
@@ -8,13 +13,13 @@
       >
         <h3 class="h2">{{ title }}</h3>
       </div>
-    </div>
+    </router-link>
   </div>
 </template>
 
 <script setup lang="ts">
   const intros = [
-    { title: 'ABOUT', to: '/' },
+    { title: 'ABOUT', to: '/about' },
     { title: 'EXPERIENCE', to: '/' },
     { title: 'WORKS', to: '/' },
     { title: 'RESUME', to: '/' },

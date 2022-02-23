@@ -1,5 +1,8 @@
 import { createApp, provide, h } from 'vue'
+import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
+import Home from './pages/Home.vue'
+import About from './pages/About.vue'
 
 import {
   ApolloClient,
@@ -65,8 +68,20 @@ const i18n = createI18n({
   },
 })
 
+// Vue-router
+const routes = [
+  { path: '/', component: Home },
+  { path: '/about', component: About },
+]
+
+const router = createRouter({
+  history: createWebHistory('/hui-site/'),
+  routes,
+})
+
 app.use(StoragePlugin)
 app.use(pinia)
 app.use(i18n)
+app.use(router)
 
 app.mount('#app')
