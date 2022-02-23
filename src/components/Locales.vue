@@ -21,7 +21,7 @@
 
 <style scoped>
   .locale {
-    @apply text-gray-300 dark:text-gray-500 transitable w-16;
+    @apply text-gray-400 dark:text-gray-500 transitable w-16;
 
     &:hover,
     &.active {
@@ -38,6 +38,6 @@
   }
 
   hr {
-    @apply w-16 h-1 mt-1 bg-purple-300 border-none transitable;
+    @apply w-16 h-1 mt-1 bg-primary border-none transitable;
   }
 </style>
