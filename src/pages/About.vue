@@ -1,3 +1,9 @@
 <template>
-  <div class="container mt-20">about</div>
+  <div class="container">
+    <under-construction content="About Page" />
+  </div>
 </template>
+
+<script setup>
+  import UnderConstruction from '@/components/UnderConstruction.vue'
+</script>

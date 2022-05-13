@@ -3,26 +3,25 @@
     <router-link
       :to="to"
       class="intro-card"
-      v-for="{ title, to } in intros"
+      v-for="({ title, to, video }, i) in intros"
       :key="title"
     >
-      <video src="@/assets/video.mp4" autoplay loop muted></video>
+      <video :src="video" autoplay loop muted></video>
       <div class="backdrop" />
-      <div
-        class="absolute inset-0 flex items-center justify-center sm:items-end sm:justify-start p-4"
-      >
-        <h3 class="h2">{{ title }}</h3>
+      <div class="absolute inset-0 flex items-center justify-center p-4">
+        <h3 class="title h1">{{ title.toUpperCase() }}</h3>
       </div>
     </router-link>
   </div>
 </template>
 
 <script setup lang="ts">
+  import aboutVideo from '@/assets/videos/about.mov'
+  import portfolioVideo from '@/assets/videos/portfolio.mov'
+
   const intros = [
-    { title: 'ABOUT', to: '/about' },
-    { title: 'EXPERIENCE', to: '/' },
-    { title: 'WORKS', to: '/' },
-    { title: 'RESUME', to: '/' },
+    { title: 'about', to: '/about', video: aboutVideo },
+    { title: 'portfolio', to: '/portfolio', video: portfolioVideo },
   ]
 </script>
 
@@ -35,12 +34,29 @@
       @apply transition-transform duration-300 absolute inset-0;
     }
 
-    &:hover video {
-      @apply scale-125;
+    .title {
+      @apply transition-all duration-300;
+      @apply text-gray-300;
+    }
+
+    &:hover {
+      video,
+      .title {
+        @apply scale-125;
+      }
+
+      .title {
+        @apply text-primary-dark;
+      }
+
+      .backdrop {
+        @apply bg-opacity-10;
+      }
     }
   }
 
   .backdrop {
     @apply absolute inset-0 bg-black bg-opacity-40;
+    @apply transition-colors duration-300;
   }
 </style>
