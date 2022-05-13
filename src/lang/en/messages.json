@@ -3,5 +3,10 @@
   "My name is": "My name is",
   "Ching Hui": "Ching Hui",
   "I'm a Uaena, also a frontend developer :)": "I'm a Uaena, also a rontend developer :)",
-  "loading": "loading..."
+  "loading": "loading...",
+  "about": "about",
+  "portfolio": "portfolio",
+  "resume": "resume",
+  "first-summary": "Currently in {company} company work as a Frontend Developer with 1 year of experience, working on a great variety of demands mainly using HTML, CSS, Javascript, Vue, etc.",
+  "second-summary": "During College, serve as TA in the frontend website course and mobile device programming course, and also have experience as an Intern in {firstIntern} and {secondIntern} company."
 }

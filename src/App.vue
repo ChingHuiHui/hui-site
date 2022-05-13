@@ -1,6 +1,6 @@
 <template>
   <div>
-    <main class="min-h-screen border-[16px] border-gray-300 py-10">
+    <main class="min-h-screen border-[16px] border-gray-300 py-4">
       <router-view />
     </main>
     <resume-tag />

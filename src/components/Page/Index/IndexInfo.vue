@@ -1,13 +1,15 @@
 <template>
   <div>
     <div class="flex flex-col items-center p-4 sm:space-y-4">
+      <mode-button />
       <div class="flex-center space-x-5 mb-6 sm:mb-0">
-        <h2 class="h1 text-primary flex flex-wrap">
-          <span class="mr-2">CHANG</span>
-          <span>CHING HUI</span>
-        </h2>
-        <mode-button />
+        <div class="flex items-end space-x-2">
+          <h2 class="h1 text-primary flex flex-wrap">
+            <span>CHING HUI, CHANG</span>
+          </h2>
+        </div>
       </div>
+
       <div class="flex-center mb-4">
         <locales />
       </div>
@@ -16,14 +18,37 @@
     <div
       class="border border-gray-400 dark:border-white p-4 pt-10 -translate-y-8 space-y-2 text-center"
     >
-      <p>
-        目前於 Fontech 擔任前端工程師，有一年的正式工作經驗，主要使用 JavaScript
-        / Vue 開發各式各樣需求的網頁。
-      </p>
-      <p>
-        在學期間曾擔任網頁前端課程與行動裝置課程的助教，也有在 3drens 和 Fontech
-        擔任前端實習生的經驗。
-      </p>
+      <i18n-t keypath="first-summary" tag="p">
+        <template #company>
+          <a
+            href="https://fontech.co/"
+            target="_blank"
+            class="text-[#f9be00] hover:text-[#e3ad00]"
+          >
+            Fontech
+          </a>
+        </template>
+      </i18n-t>
+      <i18n-t keypath="second-summary" tag="p">
+        <template #firstIntern>
+          <a
+            href="http://www.3drens.com/"
+            target="_blank"
+            class="text-[#03a9f4] hover:text-[#22aae1]"
+          >
+            3dren
+          </a>
+        </template>
+        <template #secondIntern>
+          <a
+            href="https://fontech.co/"
+            target="_blank"
+            class="text-[#f9be00] hover:text-[#e3ad00]"
+          >
+            Fontech
+          </a>
+        </template>
+      </i18n-t>
       <ul class="flex space-x-4 justify-center">
         <li class="link" v-for="link in links" :key="link.icon">
           <a :href="link.to" target="_blank">

@@ -16,13 +16,18 @@
 </template>
 
 <script setup lang="ts">
+  import { computed } from 'vue'
+  import { useI18n } from 'vue-i18n'
+
   import aboutVideo from '@/assets/videos/about.mov'
   import portfolioVideo from '@/assets/videos/portfolio.mov'
 
-  const intros = [
-    { title: 'about', to: '/about', video: aboutVideo },
-    { title: 'portfolio', to: '/portfolio', video: portfolioVideo },
-  ]
+  const { t } = useI18n()
+
+  const intros = computed(() => [
+    { title: t('about'), to: '/about', video: aboutVideo },
+    { title: t('portfolio'), to: '/portfolio', video: portfolioVideo },
+  ])
 </script>
 
 <style scoped>

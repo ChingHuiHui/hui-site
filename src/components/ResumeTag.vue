@@ -7,7 +7,7 @@
       class="text-sm"
       href="https://www.cakeresume.com/sunny-60920"
       target="_blank"
-      >RESUME</a
+      >{{ $t('resume').toUpperCase() }}</a
     >
   </div>
 </template>

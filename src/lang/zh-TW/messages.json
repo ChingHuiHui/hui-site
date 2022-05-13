@@ -3,5 +3,10 @@
   "My name is": "我的名字是",
   "Ching Hui": "晴惠",
   "I'm a Uaena, also a frontend developer :)": "我是Uaena，也是一名前端工程師 :)",
-  "loading": "等待中..."
+  "loading": "等待中...",
+  "about": "關於我",
+  "portfolio": "作品集",
+  "resume": "履歷",
+  "first-summary": "目前於 {company} 擔任前端工程師，有一年的正式工作經驗，主要使用 HTML, CSS, JavaScript, Vue 等等技術開發各式各樣需求的網頁。",
+  "second-summary": " 在學期間曾擔任網頁前端課程與行動裝置課程的助教，也有在 {firstIntern} 和 {secondIntern} 擔任前端實習生的經驗。"
 }
