@@ -77,7 +77,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory('/hui-site/'),
+  history: createWebHistory('/'),
   routes,
 })
 
