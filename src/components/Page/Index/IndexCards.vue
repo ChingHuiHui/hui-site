@@ -6,7 +6,13 @@
       v-for="({ title, to, video }, i) in intros"
       :key="title"
     >
-      <video :src="video" autoplay loop muted></video>
+      <video
+        :src="video"
+        autoplay
+        loop
+        muted
+        class="pointer-events-none"
+      ></video>
       <div class="backdrop" />
       <div class="absolute inset-0 flex items-center justify-center p-4">
         <h3 class="title h1">{{ title.toUpperCase() }}</h3>
