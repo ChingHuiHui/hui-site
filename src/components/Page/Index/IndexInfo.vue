@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex flex-col items-center p-4 sm:space-y-4">
+    <div class="flex flex-col items-center p-4 space-y-4">
       <mode-button />
       <div class="flex-center space-x-5 mb-6 sm:mb-0">
         <div class="flex items-end space-x-2">

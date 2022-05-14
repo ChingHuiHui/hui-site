@@ -8,7 +8,7 @@
   <img
     src="@/assets/images/huihui.png"
     alt=""
-    class="hidden absolute bottom-0 right-0 w-60 xl:w-80 lg:block z-50"
+    class="hidden absolute bottom-0 right-0 w-48 sm:block lg:w-60 xl:w-72 z-50"
   />
 </template>
 
